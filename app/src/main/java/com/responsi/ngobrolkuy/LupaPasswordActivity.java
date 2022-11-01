@@ -7,22 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class SplashActivity extends AppCompatActivity {
-    private TextView ngobrolTxt;
+public class LupaPasswordActivity extends AppCompatActivity {
 
-
+    private TextView submitemail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
-        ngobrolTxt = findViewById(R.id.ngobrolTxt);
+        setContentView(R.layout.activity_lupa_password);
+        submitemail = findViewById(R.id.submitemail);
 
-        ngobrolTxt.setOnClickListener(new View.OnClickListener() {
+        submitemail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                startActivity(new Intent(LupaPasswordActivity.this, CekEmailActivity.class));
             }
         });
-
     }
 }

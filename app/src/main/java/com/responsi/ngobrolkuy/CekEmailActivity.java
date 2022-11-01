@@ -7,22 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class SplashActivity extends AppCompatActivity {
-    private TextView ngobrolTxt;
+public class CekEmailActivity extends AppCompatActivity {
 
-
+    private TextView balik;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
-        ngobrolTxt = findViewById(R.id.ngobrolTxt);
+        setContentView(R.layout.activity_cek_email);
+        balik = findViewById(R.id.balik);
 
-        ngobrolTxt.setOnClickListener(new View.OnClickListener() {
+        balik.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                startActivity(new Intent(CekEmailActivity.this, LoginActivity.class));
             }
         });
-
     }
 }
